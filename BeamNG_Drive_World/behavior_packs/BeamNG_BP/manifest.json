@@ -1,0 +1,58 @@
+{
+ "format_version": 2,
+ "header": {
+  "name": "BeamNG Drive \u2013 Vehicles & Menu",
+  "description": "19 drivable vehicles, crash damage, map menu",
+  "uuid": "b3a7c1d2-5e11-4a7b-9c10-8d2e5f6a7b01",
+  "version": [
+   1,
+   0,
+   0
+  ],
+  "min_engine_version": [
+   1,
+   21,
+   0
+  ]
+ },
+ "modules": [
+  {
+   "type": "data",
+   "uuid": "b3a7c1d2-5e11-4a7b-9c10-8d2e5f6a7b02",
+   "version": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "type": "script",
+   "language": "javascript",
+   "uuid": "435781e7-fc2f-5fc6-9b7c-2769a86cb26b",
+   "version": [
+    1,
+    0,
+    0
+   ],
+   "entry": "scripts/main.js"
+  }
+ ],
+ "dependencies": [
+  {
+   "uuid": "b3a7c1d2-5e11-4a7b-9c10-8d2e5f6a7b03",
+   "version": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "module_name": "@minecraft/server",
+   "version": "2.0.0"
+  },
+  {
+   "module_name": "@minecraft/server-ui",
+   "version": "2.0.0"
+  }
+ ]
+}

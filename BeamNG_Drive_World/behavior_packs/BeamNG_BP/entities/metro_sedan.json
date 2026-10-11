@@ -1,0 +1,899 @@
+{
+ "format_version": "1.21.0",
+ "minecraft:entity": {
+  "description": {
+   "identifier": "beam:metro_sedan",
+   "is_spawnable": true,
+   "is_summonable": true,
+   "is_experimental": false,
+   "properties": {
+    "beam:damage": {
+     "type": "int",
+     "range": [
+      0,
+      3
+     ],
+     "default": 0,
+     "client_sync": true
+    },
+    "beam:lights": {
+     "type": "bool",
+     "default": false,
+     "client_sync": true
+    }
+   }
+  },
+  "component_groups": {
+   "beam:spd_0": {
+    "minecraft:movement": {
+     "value": 0.0
+    }
+   },
+   "beam:spd_1": {
+    "minecraft:movement": {
+     "value": 0.0452
+    }
+   },
+   "beam:spd_2": {
+    "minecraft:movement": {
+     "value": 0.0904
+    }
+   },
+   "beam:spd_3": {
+    "minecraft:movement": {
+     "value": 0.1357
+    }
+   },
+   "beam:spd_4": {
+    "minecraft:movement": {
+     "value": 0.1809
+    }
+   },
+   "beam:spd_5": {
+    "minecraft:movement": {
+     "value": 0.2261
+    }
+   },
+   "beam:spd_6": {
+    "minecraft:movement": {
+     "value": 0.2713
+    }
+   },
+   "beam:spd_7": {
+    "minecraft:movement": {
+     "value": 0.3165
+    }
+   },
+   "beam:spd_8": {
+    "minecraft:movement": {
+     "value": 0.3618
+    }
+   },
+   "beam:spd_9": {
+    "minecraft:movement": {
+     "value": 0.407
+    }
+   },
+   "beam:spd_10": {
+    "minecraft:movement": {
+     "value": 0.4522
+    }
+   },
+   "beam:spd_11": {
+    "minecraft:movement": {
+     "value": 0.4974
+    }
+   },
+   "beam:spd_12": {
+    "minecraft:movement": {
+     "value": 0.5426
+    }
+   },
+   "beam:spd_13": {
+    "minecraft:movement": {
+     "value": 0.5879
+    }
+   },
+   "beam:spd_14": {
+    "minecraft:movement": {
+     "value": 0.6331
+    }
+   },
+   "beam:spd_15": {
+    "minecraft:movement": {
+     "value": 0.6783
+    }
+   },
+   "beam:spd_16": {
+    "minecraft:movement": {
+     "value": 0.7235
+    }
+   },
+   "beam:spd_17": {
+    "minecraft:movement": {
+     "value": 0.7687
+    }
+   },
+   "beam:spd_18": {
+    "minecraft:movement": {
+     "value": 0.814
+    }
+   },
+   "beam:spd_19": {
+    "minecraft:movement": {
+     "value": 0.8592
+    }
+   },
+   "beam:spd_20": {
+    "minecraft:movement": {
+     "value": 0.9044
+    }
+   }
+  },
+  "components": {
+   "minecraft:type_family": {
+    "family": [
+     "beam_vehicle",
+     "vehicle",
+     "beam_family"
+    ]
+   },
+   "minecraft:collision_box": {
+    "width": 1.9,
+    "height": 1.63
+   },
+   "minecraft:health": {
+    "value": 120,
+    "max": 120
+   },
+   "minecraft:damage_sensor": {
+    "triggers": [
+     {
+      "cause": "all",
+      "deals_damage": "no"
+     }
+    ]
+   },
+   "minecraft:knockback_resistance": {
+    "value": 1.0
+   },
+   "minecraft:physics": {},
+   "minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+   },
+   "minecraft:persistent": {},
+   "minecraft:movement.basic": {},
+   "minecraft:jump.static": {},
+   "minecraft:navigation.walk": {
+    "can_path_over_water": false,
+    "avoid_water": true
+   },
+   "minecraft:is_tamed": {},
+   "minecraft:is_saddled": {},
+   "minecraft:input_ground_controlled": {},
+   "minecraft:behavior.player_ride_tamed": {},
+   "minecraft:can_power_jump": {},
+   "minecraft:rideable": {
+    "seat_count": 2,
+    "family_types": [
+     "player"
+    ],
+    "interact_text": "action.beam.drive",
+    "controlling_seat": 0,
+    "seats": [
+     {
+      "position": [
+       0.32,
+       0.46,
+       0.05
+      ],
+      "min_rider_count": 0,
+      "max_rider_count": 1,
+      "lock_rider_rotation": 0
+     },
+     {
+      "position": [
+       -0.32,
+       0.46,
+       0.05
+      ],
+      "min_rider_count": 1,
+      "max_rider_count": 2,
+      "lock_rider_rotation": 0
+     }
+    ]
+   }
+  },
+  "events": {
+   "minecraft:entity_spawned": {
+    "add": {
+     "component_groups": [
+      "beam:spd_0"
+     ]
+    }
+   },
+   "beam:spd_0": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_1",
+      "beam:spd_2",
+      "beam:spd_3",
+      "beam:spd_4",
+      "beam:spd_5",
+      "beam:spd_6",
+      "beam:spd_7",
+      "beam:spd_8",
+      "beam:spd_9",
+      "beam:spd_10",
+      "beam:spd_11",
+      "beam:spd_12",
+      "beam:spd_13",
+      "beam:spd_14",
+      "beam:spd_15",
+      "beam:spd_16",
+      "beam:spd_17",
+      "beam:spd_18",
+      "beam:spd_19",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_0"
+     ]
+    }
+   },
+   "beam:spd_1": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_2",
+      "beam:spd_3",
+      "beam:spd_4",
+      "beam:spd_5",
+      "beam:spd_6",
+      "beam:spd_7",
+      "beam:spd_8",
+      "beam:spd_9",
+      "beam:spd_10",
+      "beam:spd_11",
+      "beam:spd_12",
+      "beam:spd_13",
+      "beam:spd_14",
+      "beam:spd_15",
+      "beam:spd_16",
+      "beam:spd_17",
+      "beam:spd_18",
+      "beam:spd_19",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_1"
+     ]
+    }
+   },
+   "beam:spd_2": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_1",
+      "beam:spd_3",
+      "beam:spd_4",
+      "beam:spd_5",
+      "beam:spd_6",
+      "beam:spd_7",
+      "beam:spd_8",
+      "beam:spd_9",
+      "beam:spd_10",
+      "beam:spd_11",
+      "beam:spd_12",
+      "beam:spd_13",
+      "beam:spd_14",
+      "beam:spd_15",
+      "beam:spd_16",
+      "beam:spd_17",
+      "beam:spd_18",
+      "beam:spd_19",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_2"
+     ]
+    }
+   },
+   "beam:spd_3": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_1",
+      "beam:spd_2",
+      "beam:spd_4",
+      "beam:spd_5",
+      "beam:spd_6",
+      "beam:spd_7",
+      "beam:spd_8",
+      "beam:spd_9",
+      "beam:spd_10",
+      "beam:spd_11",
+      "beam:spd_12",
+      "beam:spd_13",
+      "beam:spd_14",
+      "beam:spd_15",
+      "beam:spd_16",
+      "beam:spd_17",
+      "beam:spd_18",
+      "beam:spd_19",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_3"
+     ]
+    }
+   },
+   "beam:spd_4": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_1",
+      "beam:spd_2",
+      "beam:spd_3",
+      "beam:spd_5",
+      "beam:spd_6",
+      "beam:spd_7",
+      "beam:spd_8",
+      "beam:spd_9",
+      "beam:spd_10",
+      "beam:spd_11",
+      "beam:spd_12",
+      "beam:spd_13",
+      "beam:spd_14",
+      "beam:spd_15",
+      "beam:spd_16",
+      "beam:spd_17",
+      "beam:spd_18",
+      "beam:spd_19",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_4"
+     ]
+    }
+   },
+   "beam:spd_5": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_1",
+      "beam:spd_2",
+      "beam:spd_3",
+      "beam:spd_4",
+      "beam:spd_6",
+      "beam:spd_7",
+      "beam:spd_8",
+      "beam:spd_9",
+      "beam:spd_10",
+      "beam:spd_11",
+      "beam:spd_12",
+      "beam:spd_13",
+      "beam:spd_14",
+      "beam:spd_15",
+      "beam:spd_16",
+      "beam:spd_17",
+      "beam:spd_18",
+      "beam:spd_19",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_5"
+     ]
+    }
+   },
+   "beam:spd_6": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_1",
+      "beam:spd_2",
+      "beam:spd_3",
+      "beam:spd_4",
+      "beam:spd_5",
+      "beam:spd_7",
+      "beam:spd_8",
+      "beam:spd_9",
+      "beam:spd_10",
+      "beam:spd_11",
+      "beam:spd_12",
+      "beam:spd_13",
+      "beam:spd_14",
+      "beam:spd_15",
+      "beam:spd_16",
+      "beam:spd_17",
+      "beam:spd_18",
+      "beam:spd_19",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_6"
+     ]
+    }
+   },
+   "beam:spd_7": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_1",
+      "beam:spd_2",
+      "beam:spd_3",
+      "beam:spd_4",
+      "beam:spd_5",
+      "beam:spd_6",
+      "beam:spd_8",
+      "beam:spd_9",
+      "beam:spd_10",
+      "beam:spd_11",
+      "beam:spd_12",
+      "beam:spd_13",
+      "beam:spd_14",
+      "beam:spd_15",
+      "beam:spd_16",
+      "beam:spd_17",
+      "beam:spd_18",
+      "beam:spd_19",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_7"
+     ]
+    }
+   },
+   "beam:spd_8": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_1",
+      "beam:spd_2",
+      "beam:spd_3",
+      "beam:spd_4",
+      "beam:spd_5",
+      "beam:spd_6",
+      "beam:spd_7",
+      "beam:spd_9",
+      "beam:spd_10",
+      "beam:spd_11",
+      "beam:spd_12",
+      "beam:spd_13",
+      "beam:spd_14",
+      "beam:spd_15",
+      "beam:spd_16",
+      "beam:spd_17",
+      "beam:spd_18",
+      "beam:spd_19",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_8"
+     ]
+    }
+   },
+   "beam:spd_9": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_1",
+      "beam:spd_2",
+      "beam:spd_3",
+      "beam:spd_4",
+      "beam:spd_5",
+      "beam:spd_6",
+      "beam:spd_7",
+      "beam:spd_8",
+      "beam:spd_10",
+      "beam:spd_11",
+      "beam:spd_12",
+      "beam:spd_13",
+      "beam:spd_14",
+      "beam:spd_15",
+      "beam:spd_16",
+      "beam:spd_17",
+      "beam:spd_18",
+      "beam:spd_19",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_9"
+     ]
+    }
+   },
+   "beam:spd_10": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_1",
+      "beam:spd_2",
+      "beam:spd_3",
+      "beam:spd_4",
+      "beam:spd_5",
+      "beam:spd_6",
+      "beam:spd_7",
+      "beam:spd_8",
+      "beam:spd_9",
+      "beam:spd_11",
+      "beam:spd_12",
+      "beam:spd_13",
+      "beam:spd_14",
+      "beam:spd_15",
+      "beam:spd_16",
+      "beam:spd_17",
+      "beam:spd_18",
+      "beam:spd_19",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_10"
+     ]
+    }
+   },
+   "beam:spd_11": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_1",
+      "beam:spd_2",
+      "beam:spd_3",
+      "beam:spd_4",
+      "beam:spd_5",
+      "beam:spd_6",
+      "beam:spd_7",
+      "beam:spd_8",
+      "beam:spd_9",
+      "beam:spd_10",
+      "beam:spd_12",
+      "beam:spd_13",
+      "beam:spd_14",
+      "beam:spd_15",
+      "beam:spd_16",
+      "beam:spd_17",
+      "beam:spd_18",
+      "beam:spd_19",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_11"
+     ]
+    }
+   },
+   "beam:spd_12": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_1",
+      "beam:spd_2",
+      "beam:spd_3",
+      "beam:spd_4",
+      "beam:spd_5",
+      "beam:spd_6",
+      "beam:spd_7",
+      "beam:spd_8",
+      "beam:spd_9",
+      "beam:spd_10",
+      "beam:spd_11",
+      "beam:spd_13",
+      "beam:spd_14",
+      "beam:spd_15",
+      "beam:spd_16",
+      "beam:spd_17",
+      "beam:spd_18",
+      "beam:spd_19",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_12"
+     ]
+    }
+   },
+   "beam:spd_13": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_1",
+      "beam:spd_2",
+      "beam:spd_3",
+      "beam:spd_4",
+      "beam:spd_5",
+      "beam:spd_6",
+      "beam:spd_7",
+      "beam:spd_8",
+      "beam:spd_9",
+      "beam:spd_10",
+      "beam:spd_11",
+      "beam:spd_12",
+      "beam:spd_14",
+      "beam:spd_15",
+      "beam:spd_16",
+      "beam:spd_17",
+      "beam:spd_18",
+      "beam:spd_19",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_13"
+     ]
+    }
+   },
+   "beam:spd_14": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_1",
+      "beam:spd_2",
+      "beam:spd_3",
+      "beam:spd_4",
+      "beam:spd_5",
+      "beam:spd_6",
+      "beam:spd_7",
+      "beam:spd_8",
+      "beam:spd_9",
+      "beam:spd_10",
+      "beam:spd_11",
+      "beam:spd_12",
+      "beam:spd_13",
+      "beam:spd_15",
+      "beam:spd_16",
+      "beam:spd_17",
+      "beam:spd_18",
+      "beam:spd_19",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_14"
+     ]
+    }
+   },
+   "beam:spd_15": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_1",
+      "beam:spd_2",
+      "beam:spd_3",
+      "beam:spd_4",
+      "beam:spd_5",
+      "beam:spd_6",
+      "beam:spd_7",
+      "beam:spd_8",
+      "beam:spd_9",
+      "beam:spd_10",
+      "beam:spd_11",
+      "beam:spd_12",
+      "beam:spd_13",
+      "beam:spd_14",
+      "beam:spd_16",
+      "beam:spd_17",
+      "beam:spd_18",
+      "beam:spd_19",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_15"
+     ]
+    }
+   },
+   "beam:spd_16": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_1",
+      "beam:spd_2",
+      "beam:spd_3",
+      "beam:spd_4",
+      "beam:spd_5",
+      "beam:spd_6",
+      "beam:spd_7",
+      "beam:spd_8",
+      "beam:spd_9",
+      "beam:spd_10",
+      "beam:spd_11",
+      "beam:spd_12",
+      "beam:spd_13",
+      "beam:spd_14",
+      "beam:spd_15",
+      "beam:spd_17",
+      "beam:spd_18",
+      "beam:spd_19",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_16"
+     ]
+    }
+   },
+   "beam:spd_17": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_1",
+      "beam:spd_2",
+      "beam:spd_3",
+      "beam:spd_4",
+      "beam:spd_5",
+      "beam:spd_6",
+      "beam:spd_7",
+      "beam:spd_8",
+      "beam:spd_9",
+      "beam:spd_10",
+      "beam:spd_11",
+      "beam:spd_12",
+      "beam:spd_13",
+      "beam:spd_14",
+      "beam:spd_15",
+      "beam:spd_16",
+      "beam:spd_18",
+      "beam:spd_19",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_17"
+     ]
+    }
+   },
+   "beam:spd_18": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_1",
+      "beam:spd_2",
+      "beam:spd_3",
+      "beam:spd_4",
+      "beam:spd_5",
+      "beam:spd_6",
+      "beam:spd_7",
+      "beam:spd_8",
+      "beam:spd_9",
+      "beam:spd_10",
+      "beam:spd_11",
+      "beam:spd_12",
+      "beam:spd_13",
+      "beam:spd_14",
+      "beam:spd_15",
+      "beam:spd_16",
+      "beam:spd_17",
+      "beam:spd_19",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_18"
+     ]
+    }
+   },
+   "beam:spd_19": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_1",
+      "beam:spd_2",
+      "beam:spd_3",
+      "beam:spd_4",
+      "beam:spd_5",
+      "beam:spd_6",
+      "beam:spd_7",
+      "beam:spd_8",
+      "beam:spd_9",
+      "beam:spd_10",
+      "beam:spd_11",
+      "beam:spd_12",
+      "beam:spd_13",
+      "beam:spd_14",
+      "beam:spd_15",
+      "beam:spd_16",
+      "beam:spd_17",
+      "beam:spd_18",
+      "beam:spd_20"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_19"
+     ]
+    }
+   },
+   "beam:spd_20": {
+    "remove": {
+     "component_groups": [
+      "beam:spd_0",
+      "beam:spd_1",
+      "beam:spd_2",
+      "beam:spd_3",
+      "beam:spd_4",
+      "beam:spd_5",
+      "beam:spd_6",
+      "beam:spd_7",
+      "beam:spd_8",
+      "beam:spd_9",
+      "beam:spd_10",
+      "beam:spd_11",
+      "beam:spd_12",
+      "beam:spd_13",
+      "beam:spd_14",
+      "beam:spd_15",
+      "beam:spd_16",
+      "beam:spd_17",
+      "beam:spd_18",
+      "beam:spd_19"
+     ]
+    },
+    "add": {
+     "component_groups": [
+      "beam:spd_20"
+     ]
+    }
+   },
+   "beam:dmg_0": {
+    "set_property": {
+     "beam:damage": 0
+    }
+   },
+   "beam:dmg_1": {
+    "set_property": {
+     "beam:damage": 1
+    }
+   },
+   "beam:dmg_2": {
+    "set_property": {
+     "beam:damage": 2
+    }
+   },
+   "beam:dmg_3": {
+    "set_property": {
+     "beam:damage": 3
+    }
+   },
+   "beam:lights_on": {
+    "set_property": {
+     "beam:lights": true
+    }
+   },
+   "beam:lights_off": {
+    "set_property": {
+     "beam:lights": false
+    }
+   }
+  }
+ }
+}
