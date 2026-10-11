@@ -1,0 +1,42 @@
+{
+ "format_version": "1.10.0",
+ "minecraft:client_entity": {
+  "description": {
+   "identifier": "beam:rock_crawler",
+   "materials": {
+    "default": "entity_emissive_alpha"
+   },
+   "textures": {
+    "d0l0": "textures/entity/beam/rock_crawler_d0l0",
+    "d0l1": "textures/entity/beam/rock_crawler_d0l1",
+    "d1l0": "textures/entity/beam/rock_crawler_d1l0",
+    "d1l1": "textures/entity/beam/rock_crawler_d1l1",
+    "d2l0": "textures/entity/beam/rock_crawler_d2l0",
+    "d2l1": "textures/entity/beam/rock_crawler_d2l1",
+    "d3l0": "textures/entity/beam/rock_crawler_d3l0",
+    "d3l1": "textures/entity/beam/rock_crawler_d3l1"
+   },
+   "geometry": {
+    "d0": "geometry.beam_rock_crawler_d0",
+    "d1": "geometry.beam_rock_crawler_d1",
+    "d2": "geometry.beam_rock_crawler_d2",
+    "d3": "geometry.beam_rock_crawler_d3"
+   },
+   "animations": {
+    "wheels": "animation.beam.wheels"
+   },
+   "scripts": {
+    "animate": [
+     "wheels"
+    ]
+   },
+   "render_controllers": [
+    "controller.render.beam_vehicle"
+   ],
+   "spawn_egg": {
+    "base_color": "#5b6b2c",
+    "overlay_color": "#222222"
+   }
+  }
+ }
+}

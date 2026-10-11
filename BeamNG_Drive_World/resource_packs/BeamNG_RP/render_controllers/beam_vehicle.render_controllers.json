@@ -1,0 +1,38 @@
+{
+ "format_version": "1.10.0",
+ "render_controllers": {
+  "controller.render.beam_vehicle": {
+   "arrays": {
+    "textures": {
+     "Array.tex": [
+      "Texture.d0l0",
+      "Texture.d0l1",
+      "Texture.d1l0",
+      "Texture.d1l1",
+      "Texture.d2l0",
+      "Texture.d2l1",
+      "Texture.d3l0",
+      "Texture.d3l1"
+     ]
+    },
+    "geometries": {
+     "Array.geo": [
+      "Geometry.d0",
+      "Geometry.d1",
+      "Geometry.d2",
+      "Geometry.d3"
+     ]
+    }
+   },
+   "geometry": "Array.geo[query.property('beam:damage')]",
+   "materials": [
+    {
+     "*": "Material.default"
+    }
+   ],
+   "textures": [
+    "Array.tex[query.property('beam:damage')*2+query.property('beam:lights')]"
+   ]
+  }
+ }
+}

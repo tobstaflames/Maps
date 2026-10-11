@@ -1,0 +1,145 @@
+{
+ "format_version": "1.14.0",
+ "sound_definitions": {
+  "beam.engine.v8": {
+   "category": "neutral",
+   "max_distance": 48,
+   "sounds": [
+    {
+     "name": "sounds/beam/engine_v8",
+     "volume": 1.0
+    }
+   ]
+  },
+  "beam.engine.v6": {
+   "category": "neutral",
+   "max_distance": 48,
+   "sounds": [
+    {
+     "name": "sounds/beam/engine_v6",
+     "volume": 1.0
+    }
+   ]
+  },
+  "beam.engine.i4": {
+   "category": "neutral",
+   "max_distance": 48,
+   "sounds": [
+    {
+     "name": "sounds/beam/engine_i4",
+     "volume": 1.0
+    }
+   ]
+  },
+  "beam.engine.super": {
+   "category": "neutral",
+   "max_distance": 48,
+   "sounds": [
+    {
+     "name": "sounds/beam/engine_super",
+     "volume": 1.0
+    }
+   ]
+  },
+  "beam.engine.rotary": {
+   "category": "neutral",
+   "max_distance": 48,
+   "sounds": [
+    {
+     "name": "sounds/beam/engine_rotary",
+     "volume": 1.0
+    }
+   ]
+  },
+  "beam.engine.diesel": {
+   "category": "neutral",
+   "max_distance": 48,
+   "sounds": [
+    {
+     "name": "sounds/beam/engine_diesel",
+     "volume": 1.0
+    }
+   ]
+  },
+  "beam.engine.buggy": {
+   "category": "neutral",
+   "max_distance": 48,
+   "sounds": [
+    {
+     "name": "sounds/beam/engine_buggy",
+     "volume": 1.0
+    }
+   ]
+  },
+  "beam.crash_light": {
+   "category": "neutral",
+   "max_distance": 64,
+   "sounds": [
+    {
+     "name": "sounds/beam/crash_light",
+     "volume": 1.0
+    }
+   ]
+  },
+  "beam.crash_heavy": {
+   "category": "neutral",
+   "max_distance": 64,
+   "sounds": [
+    {
+     "name": "sounds/beam/crash_heavy",
+     "volume": 1.0
+    }
+   ]
+  },
+  "beam.glass": {
+   "category": "neutral",
+   "max_distance": 64,
+   "sounds": [
+    {
+     "name": "sounds/beam/glass",
+     "volume": 1.0
+    }
+   ]
+  },
+  "beam.wreck": {
+   "category": "neutral",
+   "max_distance": 64,
+   "sounds": [
+    {
+     "name": "sounds/beam/wreck",
+     "volume": 1.0
+    }
+   ]
+  },
+  "beam.horn": {
+   "category": "neutral",
+   "max_distance": 64,
+   "sounds": [
+    {
+     "name": "sounds/beam/horn",
+     "volume": 1.0
+    }
+   ]
+  },
+  "beam.siren": {
+   "category": "neutral",
+   "max_distance": 64,
+   "sounds": [
+    {
+     "name": "sounds/beam/siren",
+     "volume": 1.0
+    }
+   ]
+  },
+  "beam.skid": {
+   "category": "neutral",
+   "max_distance": 64,
+   "sounds": [
+    {
+     "name": "sounds/beam/skid",
+     "volume": 1.0
+    }
+   ]
+  }
+ }
+}
